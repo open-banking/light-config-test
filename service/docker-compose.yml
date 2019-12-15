@@ -1,0 +1,54 @@
+  version: '2'
+  services:
+    accounts:
+      image: networknt/com.networknt.ob.accounts-3.1.2:latest
+      volumes:
+        - ./accounts:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-token"
+      #    env: "dev"
+    balances:
+      image: networknt/com.networknt.ob.balances-3.1.2:latest
+      volumes:
+        - ./balances:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-token"
+      #    env: "dev"
+    parties:
+      image: networknt/com.networknt.ob.parties-3.1.2:latest
+      volumes:
+        - ./parties:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-service"
+      #    env: "dev"
+    transactions:
+      image: networknt/com.networknt.ob.transactions-3.1.2:latest
+      volumes:
+        - ./transactions:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-client"
+      #    env: "dev"
