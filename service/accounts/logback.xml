@@ -83,7 +83,7 @@
     </root>
 
     <logger name="com.networknt" level="debug" additivity="false">
-        <appender-ref ref="log"/>
+        <appender-ref ref="stdout"/>
     </logger>
 
     <logger name="Audit" level="error" additivity="false">
