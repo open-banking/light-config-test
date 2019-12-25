@@ -2,5 +2,6 @@
 server.serviceId: com.networknt.ob.transactions-3.1.2
 server.enableRegistry: true
 server.dynamicPort: true
+client.verifyHostname: false
 openapi-security.enableVerifyJwt: true
 openapi-validator.skipBodyValidation: true
