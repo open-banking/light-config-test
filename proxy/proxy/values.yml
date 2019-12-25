@@ -1,0 +1,6 @@
+# Use this config file to overwrite values from other config files.
+server.serviceId: com.networknt.ob.transactions-3.1.2
+server.enableRegistry: true
+server.dynamicPort: true
+openapi-security.enableVerifyJwt: true
+openapi-validator.skipBodyValidation: true
