@@ -73,35 +73,14 @@ chains:
     - validator
 
 paths:
-  - path: '/config'
+  - path: '/transactions/accounts/{AccountId}'
     method: 'GET'
     exec:
       - default
-  - path: '/subjects'
+  - path: '/transactions'
     method: 'GET'
     exec:
       - default
-  - path: '/schemas/ids/{id}'
-    method: 'GET'
-    exec:
-      - default
-  - path: '/subjects/{subject}/versions'
-    method: 'GET'
-    exec:
-      - default
-  - path: '/subjects/{subject}/versions/{version}'
-    method: 'GET'
-    exec:
-      - default
-  - path: '/subjects/{subject}/versions/{version}/schema'
-    method: 'GET'
-    exec:
-      - default
-  - path: '/config/{subject}'
-    method: 'GET'
-    exec:
-      - default
-
   - path: '/health/com.networknt.ob.transactions-3.1.2'
     method: 'get'
     exec:
