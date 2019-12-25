@@ -102,7 +102,7 @@ paths:
     exec:
       - default
 
-  - path: '/health/com.networknt.proxy-0.1.0'
+  - path: '/health/com.networknt.ob.transactions-3.1.2'
     method: 'get'
     exec:
       - health
