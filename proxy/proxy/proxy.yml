@@ -8,7 +8,7 @@ http2Enabled: true
 httpsEnabled: true
 
 # Target URIs
-hosts: http://38.113.162.52:8443
+hosts: https://38.113.162.52:8443
 
 # Connections per thread to the target servers
 connectionsPerThread: 20
