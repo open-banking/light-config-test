@@ -1,0 +1,5 @@
+openapi-security.enableVerifyJwt: true
+server.dynamicPort: false
+server.enableRegistry: false
+client.verifyHostname: false
+
