@@ -65,9 +65,3 @@
       #    gelf-address: "udp://localhost:12201"
       #    tag: "oauth2-client"
       #    env: "dev"
-    jaeger:
-      image: jaegertracing/all-in-one:1.9
-      environment: 
-        - COLLECTOR_ZIPKIN_HTTP_PORT=9411
-      network_mode: host
-        
