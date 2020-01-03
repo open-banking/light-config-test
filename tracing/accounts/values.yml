@@ -2,3 +2,4 @@ openapi-security.enableVerifyJwt: true
 server.dynamicPort: true
 server.enableRegistry: true
 client.verifyHostname: false
+client.injectOpenTracing: true
