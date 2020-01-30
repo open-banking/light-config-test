@@ -40,7 +40,7 @@
       #    tag: "oauth2-token"
       #    env: "dev"
     direct-debits:
-      image: networknt/com.networknt.ob.direct-debits-3.1.2:latest
+      image: networknt/com.networknt.ob.directdebits-3.1.2:latest
       volumes:
         - ./direct-debits:/config
       environment:
@@ -92,7 +92,7 @@
       #    tag: "oauth2-service"
       #    env: "dev"
     scheduled-payments:
-      image: networknt/com.networknt.ob.scheduled-payments-3.1.2:latest
+      image: networknt/com.networknt.ob.scheduledpayments-3.1.2:latest
       volumes:
         - ./scheduled-payments:/config
       environment:
@@ -105,7 +105,7 @@
       #    tag: "oauth2-service"
       #    env: "dev"
     standing-orders:
-      image: networknt/com.networknt.ob.standing-orders-3.1.2:latest
+      image: networknt/com.networknt.ob.standingorders-3.1.2:latest
       volumes:
         - ./standing-orders:/config
       environment:
