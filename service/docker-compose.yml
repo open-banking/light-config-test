@@ -26,10 +26,101 @@
       #    gelf-address: "udp://localhost:12201"
       #    tag: "oauth2-token"
       #    env: "dev"
+    beneficiaries:
+      image: networknt/com.networknt.ob.beneficiaries-3.1.2:latest
+      volumes:
+        - ./beneficiaries:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-token"
+      #    env: "dev"
+    direct-debits:
+      image: networknt/com.networknt.ob.direct-debits-3.1.2:latest
+      volumes:
+        - ./direct-debits:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-token"
+      #    env: "dev"
+    offers:
+      image: networknt/com.networknt.ob.offers-3.1.2:latest
+      volumes:
+        - ./offers:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-token"
+      #    env: "dev"
     parties:
       image: networknt/com.networknt.ob.parties-3.1.2:latest
       volumes:
         - ./parties:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-service"
+      #    env: "dev"
+    products:
+      image: networknt/com.networknt.ob.products-3.1.2:latest
+      volumes:
+        - ./products:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-service"
+      #    env: "dev"
+    scheduled-payments:
+      image: networknt/com.networknt.ob.scheduled-payments-3.1.2:latest
+      volumes:
+        - ./scheduled-payments:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-service"
+      #    env: "dev"
+    standing-orders:
+      image: networknt/com.networknt.ob.standing-orders-3.1.2:latest
+      volumes:
+        - ./standing-orders:/config
+      environment:
+        - STATUS_HOST_IP=${DOCKER_HOST_IP}
+      network_mode: host    
+      #logging:
+      #  driver: "gelf"
+      #  options:
+      #    gelf-address: "udp://localhost:12201"
+      #    tag: "oauth2-service"
+      #    env: "dev"
+    statements:
+      image: networknt/com.networknt.ob.statements-3.1.2:latest
+      volumes:
+        - ./statements:/config
       environment:
         - STATUS_HOST_IP=${DOCKER_HOST_IP}
       network_mode: host    
